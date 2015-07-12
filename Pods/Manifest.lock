@@ -1,0 +1,40 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - APAddressBook/Core (0.1.11)
+  - APAddressBook/Swift (0.1.11):
+    - APAddressBook/Core
+  - BDBOAuth1Manager (1.5.0):
+    - AFNetworking/NSURLConnection (~> 2.5.0)
+    - AFNetworking/NSURLSession (~> 2.5.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - APAddressBook/Swift
+  - BDBOAuth1Manager
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  APAddressBook: 2c949367b190a993d2cce769a3b20bce8bcf000c
+  BDBOAuth1Manager: 2e28773b58f880fb36b5cd3efcf0b1fefbc78a99
+
+COCOAPODS: 0.37.2
