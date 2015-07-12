@@ -8,10 +8,20 @@
 
 import UIKit
 
-class MeViewController: UIViewController {
-
+class MeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var meImage: UIImageView!
+    @IBOutlet weak var meName: UILabel!
+    
+    var numReports: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+          self.navigationController?.navigationBar.backgroundColor = UIColor.lightGrayColor()
+//        self.navigationController?.navigationBar.backgroundColor = UIColor(red: (43/255), green: (11/255), blue: (90/255), alpha: 1.0)
+        
+        numReports = 1
 
         // Do any additional setup after loading the view.
     }
@@ -19,6 +29,20 @@ class MeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return numReports
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("myReportCell", forIndexPath: indexPath) as! MyReportCell
+        
+        return cell
     }
     
 

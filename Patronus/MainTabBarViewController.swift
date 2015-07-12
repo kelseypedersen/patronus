@@ -15,7 +15,7 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lastSelectedTabIndex = 0
+        lastSelectedTabIndex = 2
         
         if let tabs = self.tabBar.items as! [UITabBarItem]? {
             tabs[0].image = UIImage(named: "me")
@@ -29,11 +29,12 @@ class MainTabBarViewController: UITabBarController {
         }
         
         if let vcs = self.viewControllers as! [UIViewController]? {
-            let meVC: MeViewController = vcs[0] as! MeViewController
-            
-            let friendsVC: FriendsViewController = vcs[1] as! FriendsViewController
-            
-            let communityVC: CommunityViewController = vcs[2] as! CommunityViewController
+            var navMeVC = vcs[0] as! UINavigationController
+            let meVC: MeViewController = navMeVC.topViewController as! MeViewController
+            var navFriendsVC = vcs[1] as! UINavigationController
+            let friendsVC: FriendsViewController = navFriendsVC.topViewController as! FriendsViewController
+            let navCommunityVC = vcs[2] as! UINavigationController
+            let communityVC: CommunityViewController = navCommunityVC.topViewController as! CommunityViewController
         }
     }
 
@@ -43,8 +44,6 @@ class MainTabBarViewController: UITabBarController {
     }
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
-        let viewController = viewController as UIViewController
-        
 //        switch(tabBarController.selectedIndex) {
 //        case 0:
 //            
