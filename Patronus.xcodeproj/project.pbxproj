@@ -15,6 +15,10 @@
 		98D7ED311B52734A00D88344 /* PatronusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED301B52734A00D88344 /* PatronusTests.swift */; };
 		98D7ED3C1B52760100D88344 /* dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED3B1B52760100D88344 /* dummy.m */; };
 		98D7ED3E1B52769000D88344 /* libPods-Patronus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D7ED3D1B52769000D88344 /* libPods-Patronus.a */; };
+		98D7ED411B52787700D88344 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED401B52787700D88344 /* MainTabBarViewController.swift */; };
+		98D7ED431B52794800D88344 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED421B52794800D88344 /* MeViewController.swift */; };
+		98D7ED451B52795400D88344 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED441B52795400D88344 /* FriendsViewController.swift */; };
+		98D7ED471B52795E00D88344 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED461B52795E00D88344 /* CommunityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		98D7ED3A1B52760100D88344 /* Patronus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Patronus-Bridging-Header.h"; sourceTree = "<group>"; };
 		98D7ED3B1B52760100D88344 /* dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dummy.m; sourceTree = "<group>"; };
 		98D7ED3D1B52769000D88344 /* libPods-Patronus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Patronus.a"; path = "Pods/../build/Debug-iphoneos/libPods-Patronus.a"; sourceTree = "<group>"; };
+		98D7ED401B52787700D88344 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		98D7ED421B52794800D88344 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		98D7ED441B52795400D88344 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		98D7ED461B52795E00D88344 /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		B6A82780415777B3F965BBC9 /* libPods-Patronus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Patronus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +116,7 @@
 		98D7ED171B52734A00D88344 /* Patronus */ = {
 			isa = PBXGroup;
 			children = (
+				98D7ED3F1B52784F00D88344 /* View Controllers */,
 				98D7ED1A1B52734A00D88344 /* AppDelegate.swift */,
 				98D7ED1C1B52734A00D88344 /* ViewController.swift */,
 				98D7ED1E1B52734A00D88344 /* Main.storyboard */,
@@ -141,6 +150,17 @@
 				98D7ED2F1B52734A00D88344 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98D7ED3F1B52784F00D88344 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				98D7ED401B52787700D88344 /* MainTabBarViewController.swift */,
+				98D7ED421B52794800D88344 /* MeViewController.swift */,
+				98D7ED441B52795400D88344 /* FriendsViewController.swift */,
+				98D7ED461B52795E00D88344 /* CommunityViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98D7ED431B52794800D88344 /* MeViewController.swift in Sources */,
 				98D7ED3C1B52760100D88344 /* dummy.m in Sources */,
+				98D7ED411B52787700D88344 /* MainTabBarViewController.swift in Sources */,
 				98D7ED1D1B52734A00D88344 /* ViewController.swift in Sources */,
+				98D7ED451B52795400D88344 /* FriendsViewController.swift in Sources */,
 				98D7ED1B1B52734A00D88344 /* AppDelegate.swift in Sources */,
+				98D7ED471B52795E00D88344 /* CommunityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
