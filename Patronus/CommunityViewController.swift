@@ -64,16 +64,16 @@ class CommunityViewController: UIViewController, UITableViewDataSource, UITableV
             let infoVC = segue.destinationViewController as! InfoResourceViewController
             switch currentlySelectedRow {
             case 0:
-                infoVC.numRows = 4
+                infoVC.numRows = 5
                 infoVC.infoSectionToShow = 1
             case 1:
-                infoVC.numRows = 3
+                infoVC.numRows = 4
                 infoVC.infoSectionToShow = 2
             case 2:
-                infoVC.numRows = 4
+                infoVC.numRows = 5
                 infoVC.infoSectionToShow = 3
             case 3:
-                infoVC.numRows = 3
+                infoVC.numRows = 4
                 infoVC.infoSectionToShow = 4
             default:
                 NSLog("UNEXPECTED")
