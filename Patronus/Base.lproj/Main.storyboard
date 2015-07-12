@@ -68,23 +68,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hiJ-rm-TJi" userLabel="Friends Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hiJ-rm-TJi" userLabel="Friends Table View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="100" id="iwD-mZ-3Yj" customClass="FriendCell" customModule="Patronus" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="95" id="iwD-mZ-3Yj" customClass="FriendCell" customModule="Patronus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iwD-mZ-3Yj" id="wYf-0G-R4s">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CLi-k8-2Rl">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="monica" translatesAutoresizingMaskIntoConstraints="NO" id="CLi-k8-2Rl">
                                                     <rect key="frame" x="15" y="10" width="69" height="76"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="69" id="rcK-wR-4NJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monica" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQ5-0V-30e">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Monica" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQ5-0V-30e">
                                                     <rect key="frame" x="102" y="10" width="196" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,11 +163,11 @@
                                 <color key="textColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0hJ-BN-EWP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monica" translatesAutoresizingMaskIntoConstraints="NO" id="0hJ-BN-EWP">
                                 <rect key="frame" x="16" y="76" width="82" height="80"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xks-Dx-hyH">
-                                <rect key="frame" x="0.0" y="172" width="320" height="347"/>
+                                <rect key="frame" x="0.0" y="193" width="320" height="326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myReportCell" rowHeight="80" id="C2g-l8-KDv" customClass="MyReportCell" customModule="Patronus" customModuleProvider="target">
@@ -207,20 +207,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recent Reports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feV-zc-Kg0">
+                                <rect key="frame" x="0.0" y="164" width="320" height="21"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Xks-Dx-hyH" secondAttribute="trailing" id="5xb-Q3-vhz"/>
-                            <constraint firstItem="Xks-Dx-hyH" firstAttribute="top" secondItem="0hJ-BN-EWP" secondAttribute="bottom" constant="16" id="7T9-0k-MMU"/>
+                            <constraint firstItem="Xks-Dx-hyH" firstAttribute="top" secondItem="0hJ-BN-EWP" secondAttribute="bottom" constant="37" id="7T9-0k-MMU"/>
                             <constraint firstItem="njw-7h-YFL" firstAttribute="leading" secondItem="0hJ-BN-EWP" secondAttribute="trailing" constant="20" id="Mbu-e3-Pnr"/>
                             <constraint firstItem="1ye-ka-AK1" firstAttribute="top" secondItem="Xks-Dx-hyH" secondAttribute="bottom" id="NE2-nz-vEo"/>
                             <constraint firstItem="1ye-ka-AK1" firstAttribute="top" secondItem="njw-7h-YFL" secondAttribute="bottom" constant="371" id="SXc-oH-WVt"/>
                             <constraint firstItem="0hJ-BN-EWP" firstAttribute="leading" secondItem="PNw-Ug-OoU" secondAttribute="leadingMargin" id="bEg-ch-Rf6"/>
                             <constraint firstItem="1ye-ka-AK1" firstAttribute="top" secondItem="0hJ-BN-EWP" secondAttribute="bottom" constant="363" id="bhW-El-V86"/>
+                            <constraint firstItem="feV-zc-Kg0" firstAttribute="leading" secondItem="PNw-Ug-OoU" secondAttribute="leading" id="bkV-lM-A6g"/>
                             <constraint firstItem="Xks-Dx-hyH" firstAttribute="leading" secondItem="PNw-Ug-OoU" secondAttribute="leading" id="iq8-2X-Vp8"/>
                             <constraint firstItem="0hJ-BN-EWP" firstAttribute="top" secondItem="stF-V9-Tte" secondAttribute="bottom" constant="12" id="lzt-Jw-D09"/>
+                            <constraint firstAttribute="trailing" secondItem="feV-zc-Kg0" secondAttribute="trailing" id="ssN-E9-phf"/>
                             <constraint firstItem="njw-7h-YFL" firstAttribute="top" secondItem="stF-V9-Tte" secondAttribute="bottom" constant="19" id="vfD-fe-BcC"/>
+                            <constraint firstItem="feV-zc-Kg0" firstAttribute="top" secondItem="0hJ-BN-EWP" secondAttribute="bottom" constant="5" id="wVN-jc-eHy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="njw-7h-YFL" secondAttribute="trailing" constant="8" id="wdq-LD-eMw"/>
+                            <constraint firstItem="Xks-Dx-hyH" firstAttribute="top" secondItem="feV-zc-Kg0" secondAttribute="bottom" constant="5" id="wqr-ih-1R0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Me" id="Gks-gf-ovK">
@@ -318,6 +329,7 @@
     </scenes>
     <resources>
         <image name="invite" width="31" height="31"/>
+        <image name="monica" width="661" height="543"/>
         <image name="settings" width="31" height="31"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

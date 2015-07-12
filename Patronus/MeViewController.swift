@@ -21,9 +21,11 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
           self.navigationController?.navigationBar.backgroundColor = UIColor.lightGrayColor()
 //        self.navigationController?.navigationBar.backgroundColor = UIColor(red: (43/255), green: (11/255), blue: (90/255), alpha: 1.0)
         
+        meImage.layer.cornerRadius = 5
         numReports = 1
-
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

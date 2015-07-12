@@ -18,6 +18,8 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         self.navigationController?.navigationBar.backgroundColor = UIColor.lightGrayColor()
         
+        tableView.dataSource = self
+        tableView.delegate = self
         numFriends = 1
     }
 

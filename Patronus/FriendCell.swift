@@ -17,6 +17,7 @@ class FriendCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        friendImage.layer.cornerRadius = 5
         
     }
 
