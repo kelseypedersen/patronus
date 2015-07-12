@@ -11,7 +11,7 @@ import UIKit
 class CommunityViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var currentlySelectedRow: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,15 +52,40 @@ class CommunityViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        currentlySelectedRow = indexPath.row
+        performSegueWithIdentifier("showMoreInfo", sender: tableView)
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showMoreInfo" {
+            let infoVC = segue.destinationViewController as! InfoResourceViewController
+            switch currentlySelectedRow {
+            case 0:
+                infoVC.numRows = 4
+                infoVC.infoSectionToShow = 1
+            case 1:
+                infoVC.numRows = 3
+                infoVC.infoSectionToShow = 2
+            case 2:
+                infoVC.numRows = 4
+                infoVC.infoSectionToShow = 3
+            case 3:
+                infoVC.numRows = 3
+                infoVC.infoSectionToShow = 4
+            default:
+                NSLog("UNEXPECTED")
+            }
+        }
     }
-    */
 
 }
+
+
+
+
+
+
+

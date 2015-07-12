@@ -50,11 +50,12 @@
                     <navigationItem key="navigationItem" title="Community" id="dhV-lt-46A"/>
                     <connections>
                         <outlet property="tableView" destination="Ogz-26-mfO" id="88a-DY-DfA"/>
+                        <segue destination="dwe-vT-jDR" kind="modal" identifier="showMoreInfo" id="Sv2-m5-Epe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7t-5O-kRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="972"/>
+            <point key="canvasLocation" x="242" y="970"/>
         </scene>
         <!--Friends-->
         <scene sceneID="j9W-AK-FvU">
@@ -307,6 +308,65 @@
             </objects>
             <point key="canvasLocation" x="-153" y="972"/>
         </scene>
+        <!--Info Resource View Controller-->
+        <scene sceneID="bPx-o2-ust">
+            <objects>
+                <viewController id="dwe-vT-jDR" customClass="InfoResourceViewController" customModule="Patronus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h17-fL-dWF"/>
+                        <viewControllerLayoutGuide type="bottom" id="FFV-uE-kHi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qPN-Vg-1w3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cOR-PZ-dcD">
+                                <rect key="frame" x="0.0" y="53" width="320" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailedInfoCell" rowHeight="65" id="STe-0Q-dE0" customClass="DetailedInfoCell" customModule="Patronus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STe-0Q-dE0" id="hZa-JQ-OaT">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e23-dS-Eh4">
+                                <rect key="frame" x="258" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="t8G-Ks-JuR"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="dwe-vT-jDR" eventType="touchUpInside" id="lEr-fa-guf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cOR-PZ-dcD" firstAttribute="top" secondItem="qPN-Vg-1w3" secondAttribute="top" id="Pxf-3d-3hM"/>
+                            <constraint firstAttribute="bottom" secondItem="cOR-PZ-dcD" secondAttribute="bottom" id="UoC-md-oBo"/>
+                            <constraint firstItem="cOR-PZ-dcD" firstAttribute="leading" secondItem="qPN-Vg-1w3" secondAttribute="leading" id="aa7-It-lfG"/>
+                            <constraint firstItem="e23-dS-Eh4" firstAttribute="top" secondItem="h17-fL-dWF" secondAttribute="bottom" id="lLP-4x-Par"/>
+                            <constraint firstItem="e23-dS-Eh4" firstAttribute="trailing" secondItem="qPN-Vg-1w3" secondAttribute="trailingMargin" id="w6K-kI-O14"/>
+                            <constraint firstAttribute="trailing" secondItem="cOR-PZ-dcD" secondAttribute="trailing" id="xXm-0D-RaD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="e23-dS-Eh4" id="msj-g2-zok"/>
+                        <outlet property="tableView" destination="cOR-PZ-dcD" id="CoS-NH-5zX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlU-ks-JRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="970"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="RJ5-uN-4fe">
             <objects>
@@ -324,7 +384,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXb-qG-D9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="972"/>
+            <point key="canvasLocation" x="999" y="970"/>
         </scene>
     </scenes>
     <resources>
