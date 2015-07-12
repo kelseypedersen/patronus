@@ -16,6 +16,7 @@ class Incident: NSObject {
     var latCoordinate: Double?
     var longCoordinate: Double?
     var datetime: String?
+    var location: String?
     
     init(dict: NSDictionary) {
         super.init()

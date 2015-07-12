@@ -27,6 +27,7 @@
 		98D7ED581B52DF1A00D88344 /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED571B52DF1A00D88344 /* DataAPI.swift */; };
 		98D7ED5A1B52DFFF00D88344 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED591B52DFFF00D88344 /* Person.swift */; };
 		98D7ED5C1B52E99100D88344 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED5B1B52E99100D88344 /* Incident.swift */; };
+		98D7ED5E1B52FC9D00D88344 /* ReportIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED5D1B52FC9D00D88344 /* ReportIncidentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		98D7ED571B52DF1A00D88344 /* DataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
 		98D7ED591B52DFFF00D88344 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		98D7ED5B1B52E99100D88344 /* Incident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
+		98D7ED5D1B52FC9D00D88344 /* ReportIncidentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportIncidentViewController.swift; sourceTree = "<group>"; };
 		B6A82780415777B3F965BBC9 /* libPods-Patronus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Patronus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +181,7 @@
 				98D7ED461B52795E00D88344 /* CommunityViewController.swift */,
 				98D7ED481B52CA5800D88344 /* blah.swift */,
 				98D7ED521B52D27C00D88344 /* InfoResourceViewController.swift */,
+				98D7ED5D1B52FC9D00D88344 /* ReportIncidentViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				98D7ED471B52795E00D88344 /* CommunityViewController.swift in Sources */,
 				98D7ED551B52D58200D88344 /* DetailedInfoCell.swift in Sources */,
 				98D7ED4D1B52CB2300D88344 /* MyReportCell.swift in Sources */,
+				98D7ED5E1B52FC9D00D88344 /* ReportIncidentViewController.swift in Sources */,
 				98D7ED511B52CD1500D88344 /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

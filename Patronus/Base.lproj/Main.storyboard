@@ -47,7 +47,17 @@
                             <constraint firstItem="Ogz-26-mfO" firstAttribute="leading" secondItem="1oH-Nl-4Db" secondAttribute="leading" id="eyN-2d-5YK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Community" id="dhV-lt-46A"/>
+                    <navigationItem key="navigationItem" title="Community" id="dhV-lt-46A">
+                        <barButtonItem key="leftBarButtonItem" image="report" id="kOZ-96-5EE">
+                            <color key="tintColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Irr-ly-frb" kind="push" id="Ncx-WJ-06l"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="invite" id="gf8-Kj-2fB">
+                            <color key="tintColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Ogz-26-mfO" id="88a-DY-DfA"/>
                         <segue destination="dwe-vT-jDR" kind="modal" identifier="showMoreInfo" id="Sv2-m5-Epe"/>
@@ -56,6 +66,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7t-5O-kRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242" y="970"/>
+        </scene>
+        <!--Report Incident View Controller-->
+        <scene sceneID="LdT-KL-H0t">
+            <objects>
+                <viewController id="Irr-ly-frb" customClass="ReportIncidentViewController" customModule="Patronus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mth-4E-Ns9"/>
+                        <viewControllerLayoutGuide type="bottom" id="fdy-Wt-zto"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cEP-tU-85u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Local Disturbance" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SjW-0l-iY0">
+                                <rect key="frame" x="32" y="117" width="257" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type of Disturbance" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfB-55-dn0">
+                                <rect key="frame" x="32" y="169" width="257" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-Pf-8ce">
+                                <rect key="frame" x="0.0" y="476" width="320" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="nR9-df-xry"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Totally Anonymous" image="info">
+                                    <color key="titleColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-rq-Ic1">
+                                <rect key="frame" x="32" y="224" width="257" height="174"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="XOe-B3-tfL"/>
+                                </constraints>
+                                <color key="textColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vO9-Pf-8ce" firstAttribute="centerX" secondItem="Lwp-rq-Ic1" secondAttribute="centerX" id="8l6-Ok-cao"/>
+                            <constraint firstItem="SjW-0l-iY0" firstAttribute="top" secondItem="mth-4E-Ns9" secondAttribute="bottom" constant="53" id="FsU-0f-Dpx"/>
+                            <constraint firstItem="Lwp-rq-Ic1" firstAttribute="leading" secondItem="JfB-55-dn0" secondAttribute="leading" id="HLp-bT-mDh"/>
+                            <constraint firstItem="vO9-Pf-8ce" firstAttribute="top" secondItem="Lwp-rq-Ic1" secondAttribute="bottom" constant="78" id="ID2-TJ-029"/>
+                            <constraint firstItem="vO9-Pf-8ce" firstAttribute="centerX" secondItem="SjW-0l-iY0" secondAttribute="centerX" id="J2w-3W-ycr"/>
+                            <constraint firstItem="vO9-Pf-8ce" firstAttribute="leading" secondItem="cEP-tU-85u" secondAttribute="leading" id="N2d-ds-nvs"/>
+                            <constraint firstItem="Lwp-rq-Ic1" firstAttribute="top" secondItem="JfB-55-dn0" secondAttribute="bottom" constant="25" id="PFb-Vd-WuX"/>
+                            <constraint firstAttribute="trailing" secondItem="vO9-Pf-8ce" secondAttribute="trailing" id="VC9-Gc-JLK"/>
+                            <constraint firstItem="Lwp-rq-Ic1" firstAttribute="leading" secondItem="cEP-tU-85u" secondAttribute="leadingMargin" constant="16" id="VNj-9q-8Kl"/>
+                            <constraint firstItem="vO9-Pf-8ce" firstAttribute="centerX" secondItem="JfB-55-dn0" secondAttribute="centerX" id="iZR-TC-2i8"/>
+                            <constraint firstItem="Lwp-rq-Ic1" firstAttribute="leading" secondItem="SjW-0l-iY0" secondAttribute="leading" id="nsF-Ix-xie"/>
+                            <constraint firstItem="vO9-Pf-8ce" firstAttribute="bottom" secondItem="fdy-Wt-zto" secondAttribute="top" id="pRi-vS-WJf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fN5-9p-wS5">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="pLr-ca-3Fn">
+                            <color key="tintColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="VCi-np-TCT">
+                            <color key="tintColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="submitButtonClicked:" destination="Irr-ly-frb" id="Ytq-qf-GUU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="reportDescription" destination="Lwp-rq-Ic1" id="FFf-sc-bkn"/>
+                        <outlet property="reportTitle" destination="SjW-0l-iY0" id="HZu-HC-IHC"/>
+                        <outlet property="type" destination="JfB-55-dn0" id="cL8-2o-kDE"/>
+                        <segue destination="qcs-Vp-6EJ" kind="push" identifier="submitIncidentReport" id="30S-2G-nya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9N7-8c-ROd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="1610"/>
         </scene>
         <!--Friends-->
         <scene sceneID="j9W-AK-FvU">
@@ -425,10 +524,31 @@
             </objects>
             <point key="canvasLocation" x="999" y="970"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dh5-Wg-u7a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lx4-xL-2eF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="u9p-h1-1pm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ncM-0E-3an">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Irr-ly-frb" kind="relationship" relationship="rootViewController" id="XMb-Hz-KTA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13y-sc-lXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="1639"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="info" width="31" height="31"/>
         <image name="invite" width="31" height="31"/>
         <image name="monica" width="661" height="543"/>
+        <image name="report" width="31" height="31"/>
         <image name="settings" width="31" height="31"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -436,4 +556,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ncx-WJ-06l"/>
+        <segue reference="30S-2G-nya"/>
+    </inferredMetricsTieBreakers>
 </document>

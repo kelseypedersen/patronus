@@ -23,6 +23,8 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
     var myId = 1    // TODO: populate w/ user login id
     var incidents = [Incident]()
     
+    var newIncident: Incident?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
           self.navigationController?.navigationBar.backgroundColor = UIColor.lightGrayColor()
@@ -33,6 +35,10 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        if let newIncident = newIncident as Incident? {
+            incidents.append(newIncident)
+        }
         
         dataAPI.listAllSurvivors({ (survivors, error) -> () in
             if error != nil {
