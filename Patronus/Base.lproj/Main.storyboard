@@ -268,7 +268,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monica" translatesAutoresizingMaskIntoConstraints="NO" id="0hJ-BN-EWP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xian" translatesAutoresizingMaskIntoConstraints="NO" id="0hJ-BN-EWP">
                                 <rect key="frame" x="16" y="76" width="82" height="80"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xks-Dx-hyH">
@@ -341,7 +341,7 @@
                                 <color key="textColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monica" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njw-7h-YFL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njw-7h-YFL">
                                 <rect key="frame" x="118" y="83" width="178" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="178" id="niV-bZ-Wro"/>
@@ -553,6 +553,7 @@
         <image name="monica" width="661" height="543"/>
         <image name="report" width="31" height="31"/>
         <image name="settings" width="31" height="31"/>
+        <image name="xian" width="667" height="802"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
