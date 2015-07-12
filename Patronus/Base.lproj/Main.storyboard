@@ -137,6 +137,9 @@
                     <navigationItem key="navigationItem" id="fN5-9p-wS5">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="pLr-ca-3Fn">
                             <color key="tintColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="Irr-ly-frb" id="TVs-WS-yRf"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="VCi-np-TCT">
                             <color key="tintColor" red="0.16862745100000001" green="0.043137254899999998" blue="0.281932507" alpha="1" colorSpace="calibratedRGB"/>

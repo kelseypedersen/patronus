@@ -25,6 +25,9 @@ class ReportIncidentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancelButtonClicked(sender: AnyObject) {
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
     
     
     @IBAction func submitButtonClicked(sender: AnyObject) {
