@@ -13,6 +13,9 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var tableView: UITableView!
     
     var numFriends: Int!
+    var friends = [Person]()
+    let dataAPI = DataAPI()
+    let myId = 1    //TODO implement user login
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +23,15 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.dataSource = self
         tableView.delegate = self
-        numFriends = 1
+        
+        dataAPI.getSupportersBySurvivorId(self.myId, completion: { (supporters, error) -> () in
+            if error != nil {
+                NSLog("ERROR: getSupportersBySurvivorId: \(error)")
+            } else {
+                self.friends = supporters
+                self.tableView.reloadData()
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,12 +44,34 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numFriends
+        return friends.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! FriendCell
         
+        if indexPath.row < friends.count {
+            var friend = friends[indexPath.row]
+            cell.friend = friend
+            cell.friendName.text = friend.name!
+            if let status = friend.checkIn as Int! {
+                if status == 0 {
+                    cell.friendStatus.text = "Safe" //TODO need status field in Node app!
+                } else {
+                    cell.friendStatus.text = "In Danger"
+                }
+            } else {
+                cell.friendStatus.text = "In Danger"
+            }
+            
+            if let phoneNumber = friend.phoneNumber as String! {
+                cell.friendPhoneNumber.text = friend.phoneNumber!
+            } else {
+                cell.friendPhoneNumber.text = " "
+            }
+        } else {
+            NSLog("ERROR: indexPath.row: \(indexPath.row) invalid for friends.count: \(friends.count)")
+        }
         return cell
     }
     

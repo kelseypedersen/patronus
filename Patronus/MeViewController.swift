@@ -13,8 +13,15 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var meImage: UIImageView!
     @IBOutlet weak var meName: UILabel!
+    @IBOutlet weak var phoneNum: UILabel!
+    @IBOutlet weak var streetAddr: UILabel!
     
     var numReports: Int!
+    let dataAPI = DataAPI()
+    var survivors = [Person]()
+    var me: Person!
+    var myId = 1    // TODO: populate w/ user login id
+    var incidents = [Incident]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +33,32 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        dataAPI.listAllSurvivors({ (survivors, error) -> () in
+            if error != nil {
+                NSLog("ERROR: listAllSurvivors: \(error)")
+            } else {
+                self.survivors = survivors
+                for s in survivors {
+                    if s.id == self.myId {
+                        self.me = s
+                        self.meName.text = s.name
+                        self.phoneNum.text = s.phoneNumber
+                        self.streetAddr.text = s.streetAddr
+                    }
+                }
+            }
+        })
+        
+        dataAPI.listAllIncidents({ (incidents, error) -> () in
+            if error != nil {
+                NSLog("ERROR: listAllIncidents: \(error)")
+            } else {
+                self.incidents = incidents
+                self.tableView.reloadData()
+            }
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,12 +71,20 @@ class MeViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numReports
+        return incidents.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("myReportCell", forIndexPath: indexPath) as! MyReportCell
-        
+        if indexPath.row < incidents.count {
+            let i = incidents[indexPath.row]
+            cell.incident = i
+            cell.incidentDesc.text = i.message!
+            cell.datetime.text = i.datetime!
+        } else {
+            NSLog("ERROR: \(indexPath.row) invalid index for incidents.count: \(incidents.count)")
+        }
+            
         return cell
     }
     

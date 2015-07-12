@@ -24,6 +24,9 @@
 		98D7ED511B52CD1500D88344 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED501B52CD1500D88344 /* InfoCell.swift */; };
 		98D7ED531B52D27C00D88344 /* InfoResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED521B52D27C00D88344 /* InfoResourceViewController.swift */; };
 		98D7ED551B52D58200D88344 /* DetailedInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED541B52D58200D88344 /* DetailedInfoCell.swift */; };
+		98D7ED581B52DF1A00D88344 /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED571B52DF1A00D88344 /* DataAPI.swift */; };
+		98D7ED5A1B52DFFF00D88344 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED591B52DFFF00D88344 /* Person.swift */; };
+		98D7ED5C1B52E99100D88344 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7ED5B1B52E99100D88344 /* Incident.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		98D7ED501B52CD1500D88344 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		98D7ED521B52D27C00D88344 /* InfoResourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoResourceViewController.swift; sourceTree = "<group>"; };
 		98D7ED541B52D58200D88344 /* DetailedInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedInfoCell.swift; sourceTree = "<group>"; };
+		98D7ED571B52DF1A00D88344 /* DataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
+		98D7ED591B52DFFF00D88344 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		98D7ED5B1B52E99100D88344 /* Incident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		B6A82780415777B3F965BBC9 /* libPods-Patronus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Patronus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +134,7 @@
 			children = (
 				98D7ED1A1B52734A00D88344 /* AppDelegate.swift */,
 				98D7ED1E1B52734A00D88344 /* Main.storyboard */,
+				98D7ED561B52DEF400D88344 /* API */,
 				98D7ED4B1B52CAFF00D88344 /* Model */,
 				98D7ED4A1B52CAF300D88344 /* Views */,
 				98D7ED3F1B52784F00D88344 /* View Controllers */,
@@ -190,8 +197,18 @@
 		98D7ED4B1B52CAFF00D88344 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				98D7ED591B52DFFF00D88344 /* Person.swift */,
+				98D7ED5B1B52E99100D88344 /* Incident.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		98D7ED561B52DEF400D88344 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				98D7ED571B52DF1A00D88344 /* DataAPI.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,8 +350,11 @@
 				98D7ED3C1B52760100D88344 /* dummy.m in Sources */,
 				98D7ED411B52787700D88344 /* MainTabBarViewController.swift in Sources */,
 				98D7ED491B52CA5800D88344 /* blah.swift in Sources */,
+				98D7ED5C1B52E99100D88344 /* Incident.swift in Sources */,
+				98D7ED5A1B52DFFF00D88344 /* Person.swift in Sources */,
 				98D7ED4F1B52CBE300D88344 /* FriendCell.swift in Sources */,
 				98D7ED531B52D27C00D88344 /* InfoResourceViewController.swift in Sources */,
+				98D7ED581B52DF1A00D88344 /* DataAPI.swift in Sources */,
 				98D7ED451B52795400D88344 /* FriendsViewController.swift in Sources */,
 				98D7ED1B1B52734A00D88344 /* AppDelegate.swift in Sources */,
 				98D7ED471B52795E00D88344 /* CommunityViewController.swift in Sources */,

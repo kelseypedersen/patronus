@@ -9,7 +9,9 @@
 import UIKit
 
 class MyReportCell: UITableViewCell {
-    
+    var incident: Incident?
+    var message = String()
+    var datetimeString = String()
     var incidentDescText = String()
     var incidentDateTime = String()
     
@@ -18,6 +20,13 @@ class MyReportCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        if let incident = incident as Incident? {
+            message = incident.message!
+            datetimeString = incident.datetime!
+            incidentDesc.text = incidentDescText
+            datetime.text = incidentDateTime
+        }
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
